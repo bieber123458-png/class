@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>佩柔團隊14天上手計劃・審核台</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-row">
+      <div>
+        <h1>審核台</h1>
+        <div class="sub">查看每位夥伴做到第幾天，核可或退回送出的內容</div>
+      </div>
+      <button id="refreshBtn" class="secondary" style="background:transparent;border-color:#fff;color:#fff;">重新整理</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="pinCheat" class="pin-cheat"></div>
+
+    <div class="review-toolbar">
+      <label style="font-size:.82rem;display:flex;align-items:center;gap:6px;">
+        <input type="checkbox" id="pendingOnly" /> 只顯示有待審核項目的夥伴
+      </label>
+      <a href="../" style="font-size:.82rem;color:var(--ink-soft);">← 回到新人任務頁</a>
+    </div>
+    <div id="traineeList"></div>
+  </main>
+
+  <script src="review.js"></script>
+</body>
+</html>

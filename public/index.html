@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>佩柔團隊14天上手計劃</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="gate" class="gate">
+    <div class="gate-box">
+      <h1>佩柔團隊14天上手計劃</h1>
+      <p>第一天開始，依序解鎖。請先留下你的稱呼</p>
+      <input type="text" id="nameInput" placeholder="你的姓名或暱稱" />
+      <button id="nameSubmit" class="primary">開始</button>
+      <div id="nameError" class="error"></div>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <div class="wrap topbar-row">
+        <div>
+          <h1 id="greeting">哈囉</h1>
+          <div class="sub">每天完成任務並送出回饋，上級核可後解鎖下一天；當天內容還需要輸入PIN碼才看得到</div>
+        </div>
+        <button id="refreshBtn" class="secondary" style="background:transparent;border-color:#fff;color:#fff;">重新整理</button>
+      </div>
+      <div class="wrap progress-wrap">
+        <div class="progress-bar"><div id="progressFill" class="progress-bar-fill" style="width:0%"></div></div>
+        <div class="progress-text" id="progressText">0 / 13 天已完成</div>
+      </div>
+    </header>
+
+    <main class="wrap" id="dayList"></main>
+
+    <footer class="foot">
+      <a href="review/">我是上級，前往審核入口</a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

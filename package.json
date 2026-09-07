@@ -1,0 +1,16 @@
+{
+  "name": "peirou-14day-onboarding",
+  "version": "1.0.0",
+  "description": "佩柔團隊14天上手計劃：新人每日任務回傳 + 上級進度審核",
+  "private": true,
+  "type": "commonjs",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.2"
+  }
+}
