@@ -81,6 +81,9 @@ main{padding:20px 0 60px;}
 .links{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;}
 .links a{font-size:.82rem;color:var(--accent-2);background:var(--accent-soft);padding:5px 12px;border-radius:16px;text-decoration:none;}
 
+.menu-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0;}
+.menu-row span{font-size:.8rem;color:var(--ink-soft);background:var(--bg);border:1px solid var(--line);padding:5px 12px;border-radius:8px;}
+
 .fill-blank{border:1px dashed var(--line);border-radius:8px;padding:4px 14px;margin:8px 0;}
 .fb-row{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.86rem;}
 .fb-row:last-child{border-bottom:none;}

@@ -56,6 +56,7 @@
       case 'practice': return `<div class="practice">${b.items.map((p) => `<div class="row"><span>${escapeHtml(p.q)}</span><span class="ans">${escapeHtml(p.a)}</span></div>`).join('')}</div>`;
       case 'groupList': return b.items.map((g) => `<div class="group-row"><span>${escapeHtml(g.name)}${g.note ? `<small>${escapeHtml(g.note)}</small>` : ''}</span><span class="count">${escapeHtml(g.count)}</span></div>`).join('');
       case 'gapnote': return `<div class="gapnote">${escapeHtml(b.text)}</div>`;
+      case 'menu': return `<div class="menu-row">${b.items.map((i) => `<span>${escapeHtml(i)}</span>`).join('')}</div>`;
       default: return '';
     }
   }
