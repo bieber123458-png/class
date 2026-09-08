@@ -115,17 +115,9 @@ const DAYS = [
       { type: 'subhead', text: '① 萬用構圖' },
       { type: 'quote', text: '製圖前，最重要的是構圖：圖片底子不好，再怎麼修改都沒用' },
       { type: 'image', src: '/assets/grid-settings.png', caption: '認識構圖：畫面平衡感很重要（設定 → 相機 → 格線）' },
-      { type: 'p', text: '小技巧：如上圖，設定 → 相機 → 格線，開啟九宮格輔助線，拍照時比較好抓畫面平衡。' },
-      { type: 'p', text: '居中構圖：主體放在畫面正中心，適合只有一個主體、且主體夠鮮明的照片（例如全身照）' },
       { type: 'image', src: '/assets/comp-center.png', caption: '居中構圖' },
-
-      { type: 'p', text: '三分線構圖：主體對齊九宮格其中一條線，適合畫面簡單、沒有多餘內容的場景' },
       { type: 'image', src: '/assets/comp-thirds.png', caption: '三分線構圖' },
-
-      { type: 'p', text: '四宮格構圖：把人物放在九宮格左下或右下四格，等於畫面放大2倍，適合拍半身人物照' },
       { type: 'image', src: '/assets/comp-quad.png', caption: '四宮格構圖' },
-
-      { type: 'p', text: '對角線構圖：借助畫面中的引導線（欄杆、街道、桌角）帶出主體，適合同時想呈現兩種以上主題' },
       { type: 'image', src: '/assets/comp-diagonal.png', caption: '對角線構圖' },
 
       { type: 'subhead', text: '② 字體' },
@@ -164,21 +156,10 @@ const DAYS = [
       ]},
 
       { type: 'subhead', text: '⑥ 推薦使用字體' },
-      { type: 'p', text: '新手可以直接套用的安全字體：' },
-      { type: 'list', items: [
-        'jf open粉圓2.0',
-        '獅尾繁中宋體',
-        '簡宋',
-        '蘋方－繁',
-      ]},
-      { type: 'p', text: '用「下筆」App的話，可以選台灣圓體或源柔圓體，依粗細（細體／標準／半粗／粗體）調整分量感。' },
-      { type: 'image', src: '/assets/fonts-recommend.png', caption: '常用字體：Vivisticker、下筆 App 內建字體範例' },
+      { type: 'image', src: '/assets/fonts-recommend.png', caption: '常用字體：jf open粉圓2.0、獅尾繁中宋體、簡宋、蘋方－繁；Vivisticker、下筆 App 內建字體範例' },
 
       { type: 'subhead', text: '⑦ APP推薦' },
-      { type: 'p', text: '拍照推薦「美顏相機」，選『原生』模式（不加濾鏡），畫面比較真實、不會太吃妝。' },
       { type: 'image', src: '/assets/camera-app.png', caption: '美顏相機：選「原生」模式，真實質感、不吃妝' },
-      { type: 'p', text: '製圖推薦：' },
-      { type: 'voicelist', items: ['下筆', 'Vivisticker', 'Canva'] },
       { type: 'image', src: '/assets/design-apps.png', caption: '製圖常用 App：Vivisticker、下筆、Canva' },
 
       { type: 'subhead', text: '⑧ 限動尺寸' },
