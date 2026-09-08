@@ -168,7 +168,7 @@
 
     card.innerHTML = `
       <div class="day-head">
-        <h3><span class="day-num">DAY ${task.day}</span>${escapeHtml(task.title)}${task.minutes ? ` <span class="day-minutes">－${task.minutes}分鐘</span>` : ''}</h3>
+        <h3><span class="day-num">DAY ${task.day}</span>${escapeHtml(task.title)}</h3>
         ${badgeHtml}
       </div>
       ${bodyHtml}
