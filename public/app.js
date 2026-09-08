@@ -5,6 +5,21 @@
   let TASKS = [];
   let state = null; // { trainee, submissions, pinUnlocks, seqUnlocked, approvedCount, totalRealDays }
 
+  const ICONS = {
+    cart: '<circle cx="9" cy="20" r="1.3" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.3" fill="currentColor" stroke="none"/><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6.2"/>',
+    checksearch: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M8 10.5l1.8 1.8L13.5 8"/><path d="M15.5 15.5L21 21"/>',
+    truck: '<rect x="2.5" y="7" width="10.5" height="8" rx="1"/><path d="M13 10h4.2l3.3 3.3V15h-7.5z"/><circle cx="7" cy="18" r="1.6" fill="currentColor" stroke="none"/><circle cx="17" cy="18" r="1.6" fill="currentColor" stroke="none"/>',
+    receipt: '<path d="M6 3h9l3 3v13l-2-1-2 1-2-1-2 1-2-1-2 1V3z"/><circle cx="16.5" cy="16.5" r="3.6" fill="var(--surface)"/><path d="M16.5 15v1.7l1 .8"/>',
+    house: '<path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/>',
+    cloud: '<path d="M7 17a4 4 0 0 1-.5-7.97A5 5 0 0 1 16 8a3.5 3.5 0 0 1 .5 6.98"/><path d="M6.5 17h11"/>',
+    people: '<circle cx="9" cy="8" r="2.8"/><circle cx="16" cy="9.5" r="2.2"/><path d="M3.5 19c.5-3.3 3-5 5.5-5s5 1.7 5.5 5"/><path d="M14.5 14.2c2 .2 3.7 1.7 4 4.3"/>',
+    chat: '<path d="M4 5h16v10H9l-4 3v-3H4z"/>',
+    person: '<circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1-3.5 3.7-5.3 6.5-5.3s5.5 1.8 6.5 5.3"/>',
+  };
+  function iconSvg(name) {
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
+  }
+
   function traineeId() { return localStorage.getItem('peirouTraineeId') || ''; }
   function traineeName() { return localStorage.getItem('peirouTraineeName') || ''; }
 
@@ -57,6 +72,7 @@
       case 'groupList': return b.items.map((g) => `<div class="group-row"><span>${escapeHtml(g.name)}${g.note ? `<small>${escapeHtml(g.note)}</small>` : ''}</span><span class="count">${escapeHtml(g.count)}</span></div>`).join('');
       case 'gapnote': return `<div class="gapnote">${escapeHtml(b.text)}</div>`;
       case 'menu': return `<div class="menu-row">${b.items.map((i) => `<span>${escapeHtml(i)}</span>`).join('')}</div>`;
+      case 'iconmenu': return `<div class="icon-menu">${b.items.map((i) => `<div class="icon-menu-item${i.active ? ' active' : ''}"><span class="icon-menu-icon">${iconSvg(i.icon)}</span><span class="icon-menu-label">${escapeHtml(i.label)}</span></div>`).join('')}</div>`;
       default: return '';
     }
   }
