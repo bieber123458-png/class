@@ -126,6 +126,12 @@ table.price th{background:var(--surface-2);}
 .day-image{max-width:100%;border-radius:8px;border:1px solid var(--line);display:block;margin:8px 0;}
 .day-image-caption{font-size:.78rem;color:var(--ink-soft);margin-top:-4px;}
 
+.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;}
+.image-grid figure{margin:0;}
+.image-grid img{max-width:100%;border-radius:8px;border:1px solid var(--line);display:block;}
+.image-grid figcaption{font-size:.78rem;color:var(--ink-soft);margin-top:4px;text-align:center;}
+@media (max-width:480px){.image-grid{grid-template-columns:1fr;}}
+
 /* ---- pin / form ---- */
 .pin-form,.submit-form{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px;}
 .pin-form input{width:120px;padding:10px;font-size:1.1rem;letter-spacing:.2em;text-align:center;border:2px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}

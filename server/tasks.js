@@ -122,6 +122,12 @@ const DAYS = [
         '四宮格構圖：把人物放在九宮格左下或右下四格，等於畫面放大2倍，適合拍半身人物照',
         '對角線構圖：借助畫面中的引導線（欄杆、街道、桌角）帶出主體，適合同時想呈現兩種以上主題',
       ]},
+      { type: 'imagegrid', items: [
+        { src: '/assets/comp-center.png', caption: '居中構圖' },
+        { src: '/assets/comp-thirds.png', caption: '三分線構圖' },
+        { src: '/assets/comp-quad.png', caption: '四宮格構圖' },
+        { src: '/assets/comp-diagonal.png', caption: '對角線構圖' },
+      ]},
 
       { type: 'subhead', text: '② 字體' },
       { type: 'p', text: '新手先記住：' },

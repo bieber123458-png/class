@@ -81,6 +81,7 @@
         <div class="profile-card-stats">${b.stats.map((s) => `<div><div class="num">${escapeHtml(s.value)}</div><div class="lbl">${escapeHtml(s.label)}</div></div>`).join('')}</div>
         <div class="profile-card-bio">${escapeHtml(b.bio)}</div>
       </div>`;
+      case 'imagegrid': return `<div class="image-grid">${b.items.map((i) => `<figure><img src="${escapeHtml(i.src)}" alt="${escapeHtml(i.caption || '')}" />${i.caption ? `<figcaption>${escapeHtml(i.caption)}</figcaption>` : ''}</figure>`).join('')}</div>`;
       default: return '';
     }
   }
