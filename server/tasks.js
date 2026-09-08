@@ -225,6 +225,11 @@ const DAYS = [
 
       { type: 'subhead', text: '⭐ 新人必記' },
       { type: 'quote', text: '不要怕開口｜不要怕被拒絕｜不要急著成交｜先建立信任' },
+
+      { type: 'subhead', text: '📺 心態必上課程' },
+      { type: 'links', items: [
+        { url: 'https://youtu.be/0oYevHn0ShM?si=F6iL1aUD60KSse7c', label: '心態必上課程' },
+      ]},
     ],
     submitHint: '這些心裡話中，哪一句最有共鳴？另外「不要怕開口／不要怕被拒絕／不要急著成交／先建立信任」這4句裡，你覺得自己最需要練習的是哪一句？寫下原因（至少50字）',
   },
