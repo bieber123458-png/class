@@ -242,6 +242,19 @@ const DAYS = [
       { type: 'p', text: '不單單只是銷售！而是分享產品如何讓你的生活變好。' },
       { type: 'subhead', text: '框架A・四種日常內容' },
       { type: 'list', items: ['價值觀輸出', '好物分享', '餐廳探店', '出貨／工作日常'] },
+
+      { type: 'p', text: '① 價值觀輸出 範例：' },
+      { type: 'video', src: '/assets/day5-value.mp4', caption: '範例：價值觀輸出' },
+
+      { type: 'p', text: '② 好物分享 範例：' },
+      { type: 'video', src: '/assets/day5-goods.mp4', caption: '範例：好物分享' },
+
+      { type: 'p', text: '③ 餐廳探店 範例：' },
+      { type: 'video', src: '/assets/day5-restaurant.mp4', caption: '範例：餐廳探店' },
+
+      { type: 'p', text: '④ 出貨／工作日常 範例：' },
+      { type: 'video', src: '/assets/day5-work.mp4', caption: '範例：出貨／工作日常' },
+
       { type: 'subhead', text: '框架B・產品心得結構' },
       { type: 'list', items: ['吃產品的原因', '失敗的經歷', '痛點', '產品帶來的好處'] },
     ],
