@@ -149,6 +149,7 @@ const DAYS = [
       { type: 'subhead', text: '④ 畫面' },
       { type: 'p', text: '畫面要乾淨整齊，不要把太多東西全部塞在一張限動裡。可以簡單分成：' },
       { type: 'quote', text: '大標題 → 內文 → 小亮點' },
+      { type: 'image', src: '/assets/structure-example.jpg', caption: '範例：大標題（上方重點句）＋內文（下方細節說明）' },
 
       { type: 'subhead', text: '⑤ 範例對照' },
       { type: 'p', text: 'BA背景' },
