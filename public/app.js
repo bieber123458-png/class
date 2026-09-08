@@ -82,6 +82,7 @@
         <div class="profile-card-bio">${escapeHtml(b.bio)}</div>
       </div>`;
       case 'imagegrid': return `<div class="image-grid">${b.items.map((i) => `<figure><img src="${escapeHtml(i.src)}" alt="${escapeHtml(i.caption || '')}" />${i.caption ? `<figcaption>${escapeHtml(i.caption)}</figcaption>` : ''}</figure>`).join('')}</div>`;
+      case 'image': return `<img class="day-image" src="${escapeHtml(b.src)}" alt="${escapeHtml(b.caption || '')}" />${b.caption ? `<div class="day-image-caption">${escapeHtml(b.caption)}</div>` : ''}`;
       default: return '';
     }
   }

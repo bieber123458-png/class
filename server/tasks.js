@@ -109,12 +109,12 @@ const DAYS = [
     minutes: 10,
     title: '簡單的限動美感',
     pin: '305',
-    image: { src: '/assets/grid-settings.png', caption: '認識構圖：畫面平衡感很重要（設定 → 相機 → 格線）' },
     blocks: [
       { type: 'p', lead: true, text: '🎯 今天的目標：限時動態要讓大家看得懂，不是自己看懂就好。' },
 
       { type: 'subhead', text: '① 萬用構圖' },
       { type: 'quote', text: '製圖前，最重要的是構圖：圖片底子不好，再怎麼修改都沒用' },
+      { type: 'image', src: '/assets/grid-settings.png', caption: '認識構圖：畫面平衡感很重要（設定 → 相機 → 格線）' },
       { type: 'p', text: '小技巧：如上圖，設定 → 相機 → 格線，開啟九宮格輔助線，拍照時比較好抓畫面平衡。' },
       { type: 'list', items: [
         '居中構圖：主體放在畫面正中心，適合只有一個主體、且主體夠鮮明的照片（例如全身照）',
