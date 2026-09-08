@@ -144,6 +144,7 @@ const DAYS = [
         '一張限動建議不要超過兩個色系',
         '最安全可以使用同一色系做深淺搭配',
       ]},
+      { type: 'image', src: '/assets/color-example.jpg', caption: '範例：同一色系（珊瑚粉）由深到淺搭配，畫面看起來乾淨統一' },
 
       { type: 'subhead', text: '④ 畫面' },
       { type: 'p', text: '畫面要乾淨整齊，不要把太多東西全部塞在一張限動裡。可以簡單分成：' },
