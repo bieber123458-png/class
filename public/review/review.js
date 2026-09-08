@@ -6,12 +6,31 @@
   let trainees = [];
   const openIds = new Set();
 
+  function getKey() { return localStorage.getItem('peirouAdminKey') || ''; }
+
   async function api(path, options = {}) {
-    const res = await fetch(path, options);
+    const headers = Object.assign({}, options.headers, { 'x-admin-key': getKey() });
+    const res = await fetch(path, Object.assign({}, options, { headers }));
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.error || '發生錯誤，請稍後再試');
     return data;
   }
+
+  // ---- 進入金鑰驗證 ----
+  async function tryEnter(key) {
+    localStorage.setItem('peirouAdminKey', key);
+    try {
+      await api('/api/admin-check');
+      el('gate').classList.add('hidden');
+      el('app').classList.remove('hidden');
+      initApp();
+    } catch (err) {
+      el('keyError').textContent = '金鑰錯誤，請重新輸入';
+      localStorage.removeItem('peirouAdminKey');
+    }
+  }
+  el('keySubmit').addEventListener('click', () => tryEnter(el('keyInput').value.trim()));
+  el('keyInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') tryEnter(el('keyInput').value.trim()); });
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
@@ -142,8 +161,13 @@
     }
   }
 
-  el('refreshBtn').addEventListener('click', load);
-  el('pendingOnly').addEventListener('change', render);
-  load();
-  setInterval(load, 15000);
+  function initApp() {
+    el('refreshBtn').addEventListener('click', load);
+    el('pendingOnly').addEventListener('change', render);
+    load();
+    setInterval(load, 15000);
+  }
+
+  // 若已經存過金鑰，先嘗試自動登入
+  if (getKey()) tryEnter(getKey());
 })();

@@ -4,6 +4,7 @@ const express = require('express');
 const multer = require('multer');
 const { readDb, writeDb, genId } = require('../db');
 const { TASKS, getTaskById } = require('../tasks');
+const adminAuth = require('../adminAuth');
 
 const router = express.Router();
 const UPLOAD_DIR = path.join(__dirname, '..', '..', 'data', 'uploads');
@@ -67,6 +68,11 @@ function traineeView(trainee, db) {
 // ---- 課程內容（不含PIN，避免外流） ----
 router.get('/tasks', (req, res) => {
   res.json({ tasks: TASKS.map(stripPin), totalRealDays: TOTAL_REAL_DAYS });
+});
+
+// ---- 審核台金鑰驗證（給前端登入畫面測試用） ----
+router.get('/admin-check', adminAuth, (req, res) => {
+  res.json({ ok: true });
 });
 
 // ---- 建立／取得夥伴身份（免密碼） ----
@@ -165,8 +171,8 @@ router.post('/trainees/:id/submissions', (req, res) => {
   });
 });
 
-// ---- 上級審核總覽（含每天PIN，內部使用不設密碼） ----
-router.get('/review', (req, res) => {
+// ---- 上級審核總覽（含每天PIN，需要審核台金鑰） ----
+router.get('/review', adminAuth, (req, res) => {
   const db = readDb();
   const trainees = db.trainees
     .map((trainee) => traineeView(trainee, db))
@@ -174,7 +180,7 @@ router.get('/review', (req, res) => {
   res.json({ tasks: TASKS, trainees }); // 這裡的 TASKS 含 pin，給上級看
 });
 
-router.post('/submissions/:id/review', (req, res) => {
+router.post('/submissions/:id/review', adminAuth, (req, res) => {
   const { status, reviewerNote } = req.body;
   if (!['approved', 'rejected'].includes(status)) return res.status(400).json({ error: 'status 必須是 approved 或 rejected' });
   const db = readDb();

@@ -7,27 +7,41 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-row">
-      <div>
-        <h1>審核台</h1>
-        <div class="sub">查看每位夥伴做到第幾天，核可或退回送出的內容</div>
+  <!-- 進入金鑰畫面 -->
+  <div id="gate" class="gate">
+    <div class="gate-box">
+      <h1>審核台</h1>
+      <p>請輸入審核台金鑰</p>
+      <input type="password" id="keyInput" placeholder="審核台金鑰" />
+      <button id="keySubmit" class="primary">進入</button>
+      <div id="keyError" class="error"></div>
+    </div>
+  </div>
+
+  <!-- 審核台主畫面 -->
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <div class="wrap topbar-row">
+        <div>
+          <h1>審核台</h1>
+          <div class="sub">查看每位夥伴做到第幾天，核可或退回送出的內容</div>
+        </div>
+        <button id="refreshBtn" class="secondary" style="background:transparent;border-color:#fff;color:#fff;">重新整理</button>
       </div>
-      <button id="refreshBtn" class="secondary" style="background:transparent;border-color:#fff;color:#fff;">重新整理</button>
-    </div>
-  </header>
+    </header>
 
-  <main class="wrap">
-    <div id="pinCheat" class="pin-cheat"></div>
+    <main class="wrap">
+      <div id="pinCheat" class="pin-cheat"></div>
 
-    <div class="review-toolbar">
-      <label style="font-size:.82rem;display:flex;align-items:center;gap:6px;">
-        <input type="checkbox" id="pendingOnly" /> 只顯示有待審核項目的夥伴
-      </label>
-      <a href="../" style="font-size:.82rem;color:var(--ink-soft);">← 回到新人任務頁</a>
-    </div>
-    <div id="traineeList"></div>
-  </main>
+      <div class="review-toolbar">
+        <label style="font-size:.82rem;display:flex;align-items:center;gap:6px;">
+          <input type="checkbox" id="pendingOnly" /> 只顯示有待審核項目的夥伴
+        </label>
+        <a href="../" style="font-size:.82rem;color:var(--ink-soft);">← 回到新人任務頁</a>
+      </div>
+      <div id="traineeList"></div>
+    </main>
+  </div>
 
   <script src="review.js"></script>
 </body>
