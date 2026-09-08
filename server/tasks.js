@@ -171,11 +171,14 @@ const DAYS = [
         '蘋方－繁',
       ]},
       { type: 'p', text: '用「下筆」App的話，可以選台灣圓體或源柔圓體，依粗細（細體／標準／半粗／粗體）調整分量感。' },
+      { type: 'image', src: '/assets/fonts-recommend.png', caption: '常用字體：Vivisticker、下筆 App 內建字體範例' },
 
       { type: 'subhead', text: '⑦ APP推薦' },
       { type: 'p', text: '拍照推薦「美顏相機」，選『原生』模式（不加濾鏡），畫面比較真實、不會太吃妝。' },
+      { type: 'image', src: '/assets/camera-app.png', caption: '美顏相機：選「原生」模式，真實質感、不吃妝' },
       { type: 'p', text: '製圖推薦：' },
       { type: 'voicelist', items: ['下筆', 'Vivisticker', 'Canva'] },
+      { type: 'image', src: '/assets/design-apps.png', caption: '製圖常用 App：Vivisticker、下筆、Canva' },
 
       { type: 'subhead', text: '⑧ 限動尺寸' },
       { type: 'p', text: '比例：9:16' },
