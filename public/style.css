@@ -92,6 +92,16 @@ main{padding:20px 0 60px;}
 .icon-menu-item.active{color:var(--accent);}
 .icon-menu-item.active .icon-menu-icon{color:var(--accent);}
 
+.profile-card{background:#161616;color:#f2f2f2;border-radius:14px;padding:18px 20px;margin:8px 0;}
+.profile-card-head{display:flex;align-items:center;gap:14px;}
+.profile-card-avatar{width:56px;height:56px;border-radius:50%;background:#262626;border:1px solid #3a3a3a;display:flex;align-items:center;justify-content:center;color:#888;flex-shrink:0;}
+.profile-card-avatar svg{width:28px;height:28px;}
+.profile-card-name{font-weight:700;font-size:.95rem;}
+.profile-card-stats{display:flex;gap:26px;margin-top:16px;}
+.profile-card-stats .num{font-weight:700;font-size:1.05rem;font-variant-numeric:tabular-nums;}
+.profile-card-stats .lbl{font-size:.7rem;color:#9a9a9a;margin-top:2px;}
+.profile-card-bio{margin-top:16px;font-size:.85rem;line-height:1.7;white-space:pre-line;color:#e6e6e6;}
+
 .fill-blank{border:1px dashed var(--line);border-radius:8px;padding:4px 14px;margin:8px 0;}
 .fb-row{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.86rem;}
 .fb-row:last-child{border-bottom:none;}

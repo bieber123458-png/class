@@ -73,6 +73,14 @@
       case 'gapnote': return `<div class="gapnote">${escapeHtml(b.text)}</div>`;
       case 'menu': return `<div class="menu-row">${b.items.map((i) => `<span>${escapeHtml(i)}</span>`).join('')}</div>`;
       case 'iconmenu': return `<div class="icon-menu">${b.items.map((i) => `<div class="icon-menu-item${i.active ? ' active' : ''}"><span class="icon-menu-icon">${iconSvg(i.icon)}</span><span class="icon-menu-label">${escapeHtml(i.label)}</span></div>`).join('')}</div>`;
+      case 'profilecard': return `<div class="profile-card">
+        <div class="profile-card-head">
+          <span class="profile-card-avatar">${iconSvg('person')}</span>
+          <div class="profile-card-name">${escapeHtml(b.name)}</div>
+        </div>
+        <div class="profile-card-stats">${b.stats.map((s) => `<div><div class="num">${escapeHtml(s.value)}</div><div class="lbl">${escapeHtml(s.label)}</div></div>`).join('')}</div>
+        <div class="profile-card-bio">${escapeHtml(b.bio)}</div>
+      </div>`;
       default: return '';
     }
   }
