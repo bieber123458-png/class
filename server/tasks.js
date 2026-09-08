@@ -116,18 +116,17 @@ const DAYS = [
       { type: 'quote', text: '製圖前，最重要的是構圖：圖片底子不好，再怎麼修改都沒用' },
       { type: 'image', src: '/assets/grid-settings.png', caption: '認識構圖：畫面平衡感很重要（設定 → 相機 → 格線）' },
       { type: 'p', text: '小技巧：如上圖，設定 → 相機 → 格線，開啟九宮格輔助線，拍照時比較好抓畫面平衡。' },
-      { type: 'list', items: [
-        '居中構圖：主體放在畫面正中心，適合只有一個主體、且主體夠鮮明的照片（例如全身照）',
-        '三分線構圖：主體對齊九宮格其中一條線，適合畫面簡單、沒有多餘內容的場景',
-        '四宮格構圖：把人物放在九宮格左下或右下四格，等於畫面放大2倍，適合拍半身人物照',
-        '對角線構圖：借助畫面中的引導線（欄杆、街道、桌角）帶出主體，適合同時想呈現兩種以上主題',
-      ]},
-      { type: 'imagegrid', items: [
-        { src: '/assets/comp-center.png', caption: '居中構圖' },
-        { src: '/assets/comp-thirds.png', caption: '三分線構圖' },
-        { src: '/assets/comp-quad.png', caption: '四宮格構圖' },
-        { src: '/assets/comp-diagonal.png', caption: '對角線構圖' },
-      ]},
+      { type: 'p', text: '居中構圖：主體放在畫面正中心，適合只有一個主體、且主體夠鮮明的照片（例如全身照）' },
+      { type: 'image', src: '/assets/comp-center.png', caption: '居中構圖' },
+
+      { type: 'p', text: '三分線構圖：主體對齊九宮格其中一條線，適合畫面簡單、沒有多餘內容的場景' },
+      { type: 'image', src: '/assets/comp-thirds.png', caption: '三分線構圖' },
+
+      { type: 'p', text: '四宮格構圖：把人物放在九宮格左下或右下四格，等於畫面放大2倍，適合拍半身人物照' },
+      { type: 'image', src: '/assets/comp-quad.png', caption: '四宮格構圖' },
+
+      { type: 'p', text: '對角線構圖：借助畫面中的引導線（欄杆、街道、桌角）帶出主體，適合同時想呈現兩種以上主題' },
+      { type: 'image', src: '/assets/comp-diagonal.png', caption: '對角線構圖' },
 
       { type: 'subhead', text: '② 字體' },
       { type: 'p', text: '新手先記住：' },
