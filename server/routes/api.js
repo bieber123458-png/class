@@ -194,4 +194,19 @@ router.post('/submissions/:id/review', adminAuth, (req, res) => {
   res.json(submission);
 });
 
+router.delete('/submissions/:id', adminAuth, (req, res) => {
+  const db = readDb();
+  const index = db.submissions.findIndex((s) => s.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: '找不到這筆送出紀錄' });
+
+  const [submission] = db.submissions.splice(index, 1);
+  writeDb(db);
+
+  if (submission.imagePath && submission.imagePath.startsWith('/uploads/')) {
+    const filePath = path.join(UPLOAD_DIR, submission.imagePath.slice('/uploads/'.length));
+    fs.unlink(filePath, () => {});
+  }
+  res.json({ ok: true });
+});
+
 module.exports = router;

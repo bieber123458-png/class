@@ -82,6 +82,7 @@
         <textarea placeholder="給夥伴的回覆（選填，退回時建議說明原因）"></textarea>
         <button class="secondary" data-action="approve">核可，解鎖下一天</button>
         <button class="danger" data-action="reject">退回補件</button>
+        <button class="danger" data-action="delete">刪除</button>
       </div>`;
     } else if (sub.reviewerNote) {
       html += `<div class="reviewer-note ${sub.status === 'approved' ? 'ok' : 'bad'}">上級回覆：${escapeHtml(sub.reviewerNote)}（${fmtTime(sub.reviewedAt)}）</div>`;
@@ -124,14 +125,19 @@
         e.stopPropagation();
         const row = btn.closest('.review-task');
         const submissionId = row.dataset.submissionId;
-        const reviewerNote = row.querySelector('textarea').value.trim();
-        const status = btn.dataset.action === 'approve' ? 'approved' : 'rejected';
         btn.disabled = true;
         try {
-          await api(`/api/submissions/${submissionId}/review`, {
-            method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ status, reviewerNote }),
-          });
+          if (btn.dataset.action === 'delete') {
+            if (!confirm('確定要刪除這筆送出紀錄嗎？刪除後夥伴需要重新送出。')) { btn.disabled = false; return; }
+            await api(`/api/submissions/${submissionId}`, { method: 'DELETE' });
+          } else {
+            const reviewerNote = row.querySelector('textarea').value.trim();
+            const status = btn.dataset.action === 'approve' ? 'approved' : 'rejected';
+            await api(`/api/submissions/${submissionId}/review`, {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ status, reviewerNote }),
+            });
+          }
           openIds.add(t.trainee.id);
           await load();
         } catch (err) { alert(err.message); btn.disabled = false; }
