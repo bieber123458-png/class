@@ -28,6 +28,7 @@ a{color:var(--accent-2);}
 /* ---- gate ---- */
 .gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
 .gate-box{background:var(--surface);padding:32px;border-radius:14px;width:320px;max-width:100%;text-align:center;box-shadow:0 2px 16px rgba(0,0,0,.08);border:1px solid var(--line);}
+.gate-cover{display:block;width:calc(100% + 64px);margin:-32px -32px 20px;border-radius:14px 14px 0 0;}
 .gate-box h1{font-size:1.3rem;margin-bottom:8px;}
 .gate-box p{color:var(--ink-soft);margin:0 0 16px;font-size:.9rem;}
 .gate-box input{width:100%;margin-bottom:12px;padding:10px;border:2px solid var(--line);border-radius:8px;font-size:1rem;background:var(--bg);color:var(--ink);}
