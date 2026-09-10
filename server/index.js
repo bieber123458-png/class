@@ -15,6 +15,6 @@ app.use('/review', express.static(path.join(__dirname, '..', 'public', 'review')
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
 app.listen(PORT, () => {
-  console.log(`佩柔團隊14天上手計劃已啟動： http://localhost:${PORT}`);
+  console.log(`佩柔團隊10天上手計劃已啟動： http://localhost:${PORT}`);
   console.log(`上級審核台：                 http://localhost:${PORT}/review`);
 });

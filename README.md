@@ -1,6 +1,6 @@
-# 佩柔團隊14天上手計劃
+# 佩柔團隊10天上手計劃
 
-新人依序完成14天的任務，上級審核通過才解鎖下一天；每天內容還加了一組3位數PIN碼保護，PIN由上級決定何時公佈給新人。
+新人依序完成10天的任務，上級審核通過才解鎖下一天；每天內容還加了一組3位數PIN碼保護，PIN由上級決定何時公佈給新人。
 
 ## 快速開始
 
@@ -35,7 +35,7 @@ npm start
 server/
   index.js        入口，掛載路由與靜態頁面
   db.js           JSON 檔案儲存（trainees / submissions / pinUnlocks）
-  tasks.js        14天課程內容與PIN碼定義
+  tasks.js        10天課程內容與PIN碼定義
   routes/api.js   API：tasks / trainees / pin / submissions / review
 public/
   index.html/app.js     新人端
