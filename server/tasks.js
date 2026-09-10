@@ -356,15 +356,35 @@ const DAYS = [
     pin: '693',
     blocks: [
       { type: 'p', text: '認清自己的身分＋故事——你想吸引什麼樣的人，就要先把自己打扮成什麼樣的人。' },
-      { type: 'fillBlank', rows: [
-        { prompt: '我是＿＿歲', example: '我是25歲上班族' },
-        { prompt: '我的身份＿＿', example: '習慣利用中午吃飯時間去健身' },
-        { prompt: '我的日常＿＿', example: '一年多的健身經歷' },
-        { prompt: '我接觸產品的故事＿＿', example: '但是我克制不住吃零食，導致容易囤積肥肉' },
-        { prompt: '我的困擾＿＿', example: '肚子大、腿又粗總是被身邊的人嘲笑，穿裙子都會有大腿摩擦的問題' },
-      ]},
+
+      { type: 'subhead', text: '① 興趣定位' },
+      { type: 'p', text: '我喜歡做什麼？什麼事可以讓我感到快樂？' },
+
+      { type: 'subhead', text: '② 價值定位' },
+      { type: 'p', text: '我能提供什麼價值？什麼事情對我來說最重要？' },
+
+      { type: 'subhead', text: '③ 天賦定位' },
+      { type: 'p', text: '我天生擅長什麼？別人最常稱讚我什麼？' },
+
+      { type: 'subhead', text: '④ 能力定位' },
+      { type: 'p', text: '我具備哪些專業能力？我可以持續精進什麼？' },
+
+      { type: 'subhead', text: '⑤ 自我定位' },
+      { type: 'p', text: '我是誰？我想成為什麼樣的人？' },
+
+      { type: 'subhead', text: '⑥ 人設定位' },
+      { type: 'p', text: '我希望別人怎麼記住我？我想建立什麼樣的個人形象？' },
+
+      { type: 'subhead', text: '⑦ 商業定位' },
+      { type: 'p', text: '我可以靠什麼創造收入？我的專業可以如何變現？' },
+
+      { type: 'subhead', text: '⑧ 生活定位' },
+      { type: 'p', text: '我想過什麼樣的生活？什麼樣的生活方式最適合我？' },
+
+      { type: 'subhead', text: '⑨ 社會定位' },
+      { type: 'p', text: '我想為別人帶來什麼？我希望自己對這個世界產生什麼影響？' },
     ],
-    submitHint: '依照上面五格填寫你自己的版本，並簡述你想吸引的族群輪廓',
+    submitHint: '依照上面九宮格，簡短寫下你自己的版本（每格1-2句即可），並簡述完成後你對自己的定位有什麼新想法',
   },
   {
     day: 7,
