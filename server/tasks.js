@@ -596,11 +596,20 @@ const DAYS = [
     title: '新人必上課程',
     pin: '204',
     blocks: [
-      { type: 'p', text: '新人必須得上的兩堂課程：' },
+      { type: 'p', text: '新人加入後，必須完成以下兩堂基礎課程，才能開始進行後續的產品學習與客戶服務。' },
+
+      { type: 'subhead', text: '① 新人起步課程' },
+      { type: 'p', text: '先了解基本操作、社群經營與日常分享方式，建立新手的第一步。' },
+
+      { type: 'subhead', text: '② 產品與銷售課程' },
+      { type: 'p', text: '了解產品、客戶需求與基本銷售流程，學會如何自然地與客人互動。' },
+
       { type: 'links', items: [
-        { label: '課程一', url: 'https://youtu.be/iGMEzIraLYQ' },
-        { label: '課程二', url: 'https://youtu.be/YOv5Osn0Z9Q' },
+        { label: '新人起步課程', url: 'https://youtu.be/iGMEzIraLYQ' },
+        { label: '產品與銷售課程', url: 'https://youtu.be/YOv5Osn0Z9Q' },
       ]},
+
+      { type: 'quote', text: '先把基礎學會，再開始行動。\n不需要一次全部學會，照著課程一步一步做就可以。' },
     ],
     submitHint: '確認已看完以上課程，簡述你學到的重點',
   },
