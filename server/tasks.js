@@ -301,7 +301,6 @@ const DAYS = [
       { type: 'image', src: '/assets/day5-shipping-example.jpg', caption: '範例：出貨／工作日常' },
 
       { type: 'subhead', text: '框架B・產品心得結構' },
-      { type: 'list', items: ['吃產品的原因', '失敗的經歷', '痛點', '產品帶來的好處'] },
 
       { type: 'subhead', text: '① 吃產品的原因' },
       { type: 'gapnote', text: '小內文：為什麼吃？起心動念是什麼？可能是小時候胖胖的，或者是皮膚狀況問題。' },
