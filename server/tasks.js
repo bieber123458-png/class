@@ -293,10 +293,10 @@ const DAYS = [
       { type: 'subhead', text: '框架A・四種日常內容' },
       { type: 'list', items: ['價值觀輸出', '好物分享', '美食分享', '出貨／工作日常'] },
 
-      { type: 'video', src: '/assets/day5-value.mp4', caption: '範例：價值觀輸出' },
-      { type: 'video', src: '/assets/day5-goods.mp4', caption: '範例：好物分享' },
-      { type: 'video', src: '/assets/day5-restaurant.mp4', caption: '範例：美食分享' },
-      { type: 'video', src: '/assets/day5-work.mp4', caption: '範例：出貨／工作日常' },
+      { type: 'video', src: '/assets/day5-value.mp4', caption: '範例：好物分享（網購省錢心得）' },
+      { type: 'video', src: '/assets/day5-goods.mp4', caption: '範例：好物分享（產品開箱推薦）' },
+      { type: 'video', src: '/assets/day5-restaurant.mp4', caption: '範例：飲食紀錄分享' },
+      { type: 'video', src: '/assets/day5-work.mp4', caption: '範例：好物分享（生活好物戰利品）' },
 
       { type: 'subhead', text: '框架B・產品心得結構' },
       { type: 'list', items: ['吃產品的原因', '失敗的經歷', '痛點', '產品帶來的好處'] },
