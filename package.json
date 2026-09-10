@@ -1,7 +1,7 @@
 {
-  "name": "peirou-14day-onboarding",
+  "name": "peirou-10day-onboarding",
   "version": "1.0.0",
-  "description": "佩柔團隊14天上手計劃：新人每日任務回傳 + 上級進度審核",
+  "description": "佩柔團隊10天上手計劃：新人每日任務回傳 + 上級進度審核",
   "private": true,
   "type": "commonjs",
   "main": "server/index.js",
