@@ -109,6 +109,7 @@
           <div class="progress-bar"><div class="progress-bar-fill" style="width:${pct}%;"></div></div>
           <div class="progress-text">${t.approvedCount} / ${total} 天已完成</div>
         </div>
+        <button class="danger" data-action="delete-trainee" title="刪除這位夥伴的所有紀錄">刪除夥伴</button>
       </div>
       <div class="trainee-body ${open ? 'open' : ''}">
         ${TASKS.map((task) => renderTaskRow(t, task)).join('') || '<div class="empty-state">這位夥伴還沒有任何進度</div>'}
@@ -120,7 +121,19 @@
       card.querySelector('.trainee-body').classList.toggle('open');
     });
 
-    card.querySelectorAll('[data-action]').forEach((btn) => {
+    card.querySelector('[data-action="delete-trainee"]').addEventListener('click', async (e) => {
+      e.stopPropagation();
+      if (!confirm(`確定要刪除「${t.trainee.name}」的所有紀錄嗎？此動作無法復原。`)) return;
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      try {
+        await api(`/api/trainees/${t.trainee.id}`, { method: 'DELETE' });
+        openIds.delete(t.trainee.id);
+        await load();
+      } catch (err) { alert(err.message); btn.disabled = false; }
+    });
+
+    card.querySelectorAll('.review-task [data-action]').forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         e.stopPropagation();
         const row = btn.closest('.review-task');

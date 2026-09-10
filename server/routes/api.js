@@ -209,4 +209,18 @@ router.delete('/submissions/:id', adminAuth, (req, res) => {
   res.json({ ok: true });
 });
 
+router.delete('/trainees/:id', adminAuth, (req, res) => {
+  const db = readDb();
+  const index = db.trainees.findIndex((t) => t.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: '找不到這位夥伴' });
+
+  db.trainees.splice(index, 1);
+  db.submissions = db.submissions.filter((s) => s.traineeId !== req.params.id);
+  db.pinUnlocks = db.pinUnlocks.filter((p) => p.traineeId !== req.params.id);
+  writeDb(db);
+
+  fs.rm(path.join(UPLOAD_DIR, req.params.id), { recursive: true, force: true }, () => {});
+  res.json({ ok: true });
+});
+
 module.exports = router;
