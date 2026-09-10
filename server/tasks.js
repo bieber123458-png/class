@@ -388,24 +388,18 @@ const DAYS = [
   },
   {
     day: 7,
-    minutes: 1,
-    title: '包貨紙箱、破壞袋',
+    minutes: 6,
+    title: '包貨包材、上架平台',
     pin: '254',
     blocks: [
+      { type: 'subhead', text: '① 包貨包材' },
       { type: 'p', text: '睡覺也能收單，包材要先備好。收藏以下兩個採購連結：' },
       { type: 'links', items: [
         { label: '紙箱（7、9、10號）', url: 'https://s.shopee.tw/4Aog5HDf7e' },
         { label: '破壞袋（小的28*42）', url: 'https://s.shopee.tw/7V583TuYLz' },
       ]},
-    ],
-    submitHint: '確認已收藏以上兩個連結',
-  },
-  {
-    day: 8,
-    minutes: 5,
-    title: '平台選擇（賣貨便、蝦皮）',
-    pin: '830',
-    blocks: [
+
+      { type: 'subhead', text: '② 上架平台' },
       { type: 'p', text: '睡覺也能收單的賣場連結：' },
       { type: 'links', items: [
         { label: '7-11 賣貨便 上架教學', url: 'https://cpok.tw/27145' },
@@ -414,10 +408,10 @@ const DAYS = [
         { label: '綠界金流申請', url: 'https://rakosell.com/zh/blog/ec-pay-tutorial' },
       ]},
     ],
-    submitHint: '簡述你打算先用哪個平台上架、目前進度到哪一步',
+    submitHint: '確認已收藏包材採購連結，並簡述你打算先用哪個平台上架、目前進度到哪一步',
   },
   {
-    day: 9,
+    day: 8,
     minutes: 3,
     title: '百萬群組資源介紹',
     pin: '576',
@@ -438,7 +432,7 @@ const DAYS = [
     submitHint: '確認已加入以上所有群組，簡述你已加入哪幾個',
   },
   {
-    day: 10,
+    day: 9,
     minutes: 3,
     title: '纖體班報名',
     pin: '419',
@@ -458,7 +452,7 @@ const DAYS = [
     submitHint: '寫下你的報名狀況（已完成報名／預計報名日期），可附上報名成功截圖',
   },
   {
-    day: 11,
+    day: 10,
     minutes: 3,
     title: '官方群提問模版',
     pin: '962',
@@ -472,7 +466,7 @@ const DAYS = [
     submitHint: '寫下一則你會發到官方群的提問草稿（套用以上模版格式）',
   },
   {
-    day: 12,
+    day: 11,
     minutes: null,
     title: '（內容待補充）',
     pending: true,
@@ -481,7 +475,7 @@ const DAYS = [
     ],
   },
   {
-    day: 13,
+    day: 12,
     minutes: 15,
     title: '動態鋪陳SOP',
     pin: '137',
@@ -532,7 +526,7 @@ const DAYS = [
     submitHint: '依「鋪陳／銷售前／銷售中／銷售後」四個階段，各寫一句你會怎麼執行的規劃',
   },
   {
-    day: 14,
+    day: 13,
     minutes: null,
     title: '新人必上課程',
     pin: '204',
