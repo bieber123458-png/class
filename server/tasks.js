@@ -297,15 +297,19 @@ const DAYS = [
       { type: 'video', src: '/assets/day5-goods.mp4', caption: '範例：好物分享（產品開箱推薦）' },
       { type: 'video', src: '/assets/day5-restaurant.mp4', caption: '範例：飲食紀錄分享' },
       { type: 'video', src: '/assets/day5-work.mp4', caption: '範例：好物分享（生活好物戰利品）' },
+      { type: 'image', src: '/assets/day5-value-example.jpg', caption: '範例：價值觀輸出' },
+      { type: 'image', src: '/assets/day5-shipping-example.jpg', caption: '範例：出貨／工作日常' },
 
       { type: 'subhead', text: '框架B・產品心得結構' },
       { type: 'list', items: ['吃產品的原因', '失敗的經歷', '痛點', '產品帶來的好處'] },
 
       { type: 'subhead', text: '① 吃產品的原因' },
       { type: 'gapnote', text: '小內文：為什麼吃？起心動念是什麼？可能是小時候胖胖的，或者是皮膚狀況問題。' },
+      { type: 'image', src: '/assets/day5-reason-example.jpg', caption: '範例：吃產品的原因' },
 
       { type: 'subhead', text: '② 失敗的經歷' },
       { type: 'gapnote', text: '小內文：可能是我過去觀念錯誤，覺得吃保健食品就可以大吃大喝，或者是我很愛擠痘痘然後造成有痘疤的問題。' },
+      { type: 'image', src: '/assets/day5-failure-example.jpg', caption: '範例：失敗的經歷' },
 
       { type: 'subhead', text: '③ 痛點' },
       { type: 'subhead', text: '瘦身痛點' },
