@@ -123,7 +123,6 @@
 
     card.querySelector('[data-action="delete-trainee"]').addEventListener('click', async (e) => {
       e.stopPropagation();
-      if (!confirm(`確定要刪除「${t.trainee.name}」的所有紀錄嗎？此動作無法復原。`)) return;
       const btn = e.currentTarget;
       btn.disabled = true;
       try {
@@ -141,7 +140,6 @@
         btn.disabled = true;
         try {
           if (btn.dataset.action === 'delete') {
-            if (!confirm('確定要刪除這筆送出紀錄嗎？刪除後夥伴需要重新送出。')) { btn.disabled = false; return; }
             await api(`/api/submissions/${submissionId}`, { method: 'DELETE' });
           } else {
             const reviewerNote = row.querySelector('textarea').value.trim();
