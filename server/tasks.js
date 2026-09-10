@@ -592,10 +592,6 @@ const DAYS = [
         { label: '課程一', url: 'https://youtu.be/iGMEzIraLYQ' },
         { label: '課程二', url: 'https://youtu.be/YOv5Osn0Z9Q' },
       ]},
-      { type: 'p', text: '九宮格引流課程：' },
-      { type: 'links', items: [
-        { label: '九宮格引流課程', url: 'https://youtu.be/DBdarfdHajc' },
-      ]},
     ],
     submitHint: '確認已看完以上課程，簡述你學到的重點',
   },
